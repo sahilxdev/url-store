@@ -1,9 +1,12 @@
 const express = require('express');
+const cors = require('cors');
 const fs = require('fs');
 const app = express();
 const port = process.env.PORT || 3000;  // Use PORT from environment variable or default to 3000
 
+app.use(cors());   
 app.use(express.json());
+
 
 const filePath = './url.json';  // The JSON file where the URL will be stored
 
